@@ -1,0 +1,10 @@
+To make it simple, the script takes and processes “-seconds” or “-minutes” arguments first and passes the remaining parameters to mplayer.
+Limitations are that the file name must be the last parameter, and “-seconds/-minutes” must appear before other parameters. For example,
+
+$ ./playinterval.sh -seconds 30 -ss 00:09:18 -loop 2 filename.wmv
+
+This will play filename.wmv starting from 00:09:18 for 30 seconds (twice).
+
+$ ./playinterval.sh -minutes 10.4 -ss 00:12:00 -loop 0 filename.wmv
+
+This will play filename.wmv starting from 00:12:00 for 10.4 minutes (forever).
